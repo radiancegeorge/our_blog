@@ -4,7 +4,7 @@
     padding: 0;
     text-decoration: none;
     list-style-type: none;
-    font-family: sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 body{
     background-color: #f9f9fb;
@@ -80,13 +80,14 @@ body{
 }
 .highlights{
     padding: 10px 0px;
+    margin: 50px 0;
     .main-highlights{
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
         flex-wrap: wrap;
         .col{
-            flex-basis: 22%;
+            flex-basis: 23%;
             display: flex;
             flex-wrap: wrap;
             align-items: flex-start;
@@ -100,6 +101,19 @@ body{
             transition: 0.5s;
             &:hover{
                 box-shadow: 1px 1px 15px lightgrey;
+
+            }
+            .cat-img{
+                background: #000;
+                width: fit-content;
+                padding: 5px;
+                border-radius: 6px;
+                margin: auto;
+                position: relative;
+                top: -30px;
+                img{
+                    width: 30px;
+                }
 
             }
             h3{
@@ -159,5 +173,52 @@ body{
         }
         }
         
+    }
+}
+.footer{
+    background-color: #212429;
+    padding: 20px 0;
+    color: white;
+    footer{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        h1{
+            text-transform: uppercase;
+            margin: 20px 0;
+            font-size: 18px;
+            letter-spacing: 3px;
+        }
+        p{
+            font-size: 15px;
+            font-weight: 300;
+            margin: 0 2px;
+            
+        }
+        .about-blog{
+            flex-basis: 24%;
+        }
+        .latest-tweets{
+           flex-basis: 24%; 
+           .tweet{
+               display: flex;
+               align-items: flex-start;
+               margin: 20px 0;
+           }
+        }
+        .follow-me{
+            flex-basis: 24%;
+
+        }
+        .latest-comments{
+            flex-basis: 24%;
+            .comment-box{
+                margin: 20px 0;
+                .name  {
+                    text-transform: capitalize;
+                }
+            }
+        }
     }
 }

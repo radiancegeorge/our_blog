@@ -5,7 +5,7 @@
   padding: 0;
   text-decoration: none;
   list-style-type: none;
-  font-family: sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
@@ -113,6 +113,7 @@ body {
 
 .highlights {
   padding: 10px 0px;
+  margin: 50px 0;
 }
 
 .highlights .main-highlights {
@@ -130,8 +131,8 @@ body {
 }
 
 .highlights .main-highlights .col {
-  -ms-flex-preferred-size: 22%;
-      flex-basis: 22%;
+  -ms-flex-preferred-size: 23%;
+      flex-basis: 23%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -159,6 +160,22 @@ body {
 .highlights .main-highlights .col .card:hover {
   -webkit-box-shadow: 1px 1px 15px lightgrey;
           box-shadow: 1px 1px 15px lightgrey;
+}
+
+.highlights .main-highlights .col .card .cat-img {
+  background: #000;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 5px;
+  border-radius: 6px;
+  margin: auto;
+  position: relative;
+  top: -30px;
+}
+
+.highlights .main-highlights .col .card .cat-img img {
+  width: 30px;
 }
 
 .highlights .main-highlights .col .card h3 {
@@ -231,5 +248,76 @@ body {
 .highlights .main-highlights .col .card .cmt .share a img {
   width: 12px;
   height: 12px;
+}
+
+.footer {
+  background-color: #212429;
+  padding: 20px 0;
+  color: white;
+}
+
+.footer footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.footer footer h1 {
+  text-transform: uppercase;
+  margin: 20px 0;
+  font-size: 18px;
+  letter-spacing: 3px;
+}
+
+.footer footer p {
+  font-size: 15px;
+  font-weight: 300;
+  margin: 0 2px;
+}
+
+.footer footer .about-blog {
+  -ms-flex-preferred-size: 24%;
+      flex-basis: 24%;
+}
+
+.footer footer .latest-tweets {
+  -ms-flex-preferred-size: 24%;
+      flex-basis: 24%;
+}
+
+.footer footer .latest-tweets .tweet {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 20px 0;
+}
+
+.footer footer .follow-me {
+  -ms-flex-preferred-size: 24%;
+      flex-basis: 24%;
+}
+
+.footer footer .latest-comments {
+  -ms-flex-preferred-size: 24%;
+      flex-basis: 24%;
+}
+
+.footer footer .latest-comments .comment-box {
+  margin: 20px 0;
+}
+
+.footer footer .latest-comments .comment-box .name {
+  text-transform: capitalize;
 }
 /*# sourceMappingURL=style.css.map */
