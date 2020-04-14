@@ -33,7 +33,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 5px;
+  padding: 0 5px;
 }
 
 .header nav .menu {
@@ -44,9 +44,14 @@ body {
   cursor: pointer;
 }
 
+.header nav .share a {
+  padding: 0 10px;
+  border-left: 1px solid grey;
+}
+
 .imageslider {
   position: relative;
-  top: -24vh;
+  top: -23vh;
 }
 
 .imageslider .wrap .images img {

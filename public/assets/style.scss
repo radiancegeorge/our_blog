@@ -24,7 +24,7 @@ body{
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 5px;
+      padding: 0 5px;
       .menu{
           padding:5px 10px;
           border: 0.5px solid grey;
@@ -32,12 +32,18 @@ body{
           border-bottom: none;
           cursor: pointer;
       }
+      .share{
+          a{
+              padding: 0 10px;
+              border-left: 1px solid grey;
+          }
+      }
   }
   
 }
 .imageslider{
     position: relative;
-    top: -24vh;
+    top: -23vh;
     .wrap{
         .images{
             img{
