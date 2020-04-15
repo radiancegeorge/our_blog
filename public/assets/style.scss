@@ -43,7 +43,7 @@ body{
           background-color: rgba(33, 36, 41,0.99);
           width: 0;
           left: 0;
-          height: 100vh;
+          min-height: 100%;
           line-height: 3;
           .close{
               font-size: 35px;
@@ -144,9 +144,12 @@ body{
         .col{
             flex-basis: 23%;
             display: flex;
-            flex-wrap: wrap;
+            // flex-wrap: wrap;
             align-items: flex-start;
-            justify-content: space-between;
+            // justify-content: space-between;
+            position: relative;
+            flex-direction: column;
+            opacity: 1;
             .card{
             flex-basis: 100%;
             background:white;
@@ -154,6 +157,9 @@ body{
             text-align: center;
             padding: 15px;
             transition: 0.5s;
+            position: relative;
+            opacity: 1;
+
             &:hover{
                 box-shadow: 1px 1px 15px lightgrey;
 
