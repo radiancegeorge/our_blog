@@ -44,6 +44,10 @@ body {
   cursor: pointer;
 }
 
+.header nav .nav-items {
+  position: absolute;
+}
+
 .header nav .share a {
   padding: 0 10px;
   border-left: 1px solid grey;
@@ -51,7 +55,7 @@ body {
 
 .imageslider {
   position: relative;
-  top: -23vh;
+  top: -24vh;
 }
 
 .imageslider .wrap .images img {
