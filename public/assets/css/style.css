@@ -21,6 +21,7 @@ body {
   background-color: #212429;
   color: lightgrey;
   height: 30vh;
+  padding: 5px 0px;
 }
 
 .header nav {
@@ -45,7 +46,61 @@ body {
 }
 
 .header nav .nav-items {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  overflow: hidden;
   position: absolute;
+  top: 0;
+  z-index: 3;
+  background-color: rgba(33, 36, 41, 0.99);
+  width: 0;
+  left: 0;
+  height: 100vh;
+  line-height: 3;
+}
+
+.header nav .nav-items .close {
+  font-size: 35px;
+  text-align: right;
+  padding: 0 60px;
+  cursor: pointer;
+  position: relative;
+  width: 50px;
+  height: 100px;
+  margin-left: auto;
+}
+
+.header nav .nav-items .close span {
+  position: absolute;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.header nav .nav-items li {
+  border-bottom: 1px solid grey;
+}
+
+.header nav .nav-items li a {
+  padding: 5px 15px;
+  display: block;
+  color: white;
+  text-transform: capitalize;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.header nav .nav-items li a:hover {
+  background-color: lightgrey;
+  color: black;
+}
+
+.header nav .rotate45deg {
+  -webkit-transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
+}
+
+.header nav .show-items {
+  width: 300px;
 }
 
 .header nav .share a {
