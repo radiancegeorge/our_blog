@@ -18,7 +18,8 @@ cols.forEach(col => {
                 console.log('over');
                 gsap.to(e.target,{
                     y: -5,
-                    rotateZ: 2
+                    rotateZ: 2,
+                    duration: 0.5,
                 })
             })
     })
@@ -28,11 +29,12 @@ cols.forEach(col => {
         console.log('over');
         gsap.to(e.target,{
             y: 5,
-            rotateZ: 0
+            rotateZ: 0,
+            duration: 0.2,
         })
     })
     })
     
-    return time++
+    return time ++
 });
 

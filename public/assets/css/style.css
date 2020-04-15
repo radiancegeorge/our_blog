@@ -218,8 +218,6 @@ body {
   margin: 20px 0px;
   text-align: center;
   padding: 15px;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
   position: relative;
   opacity: 1;
 }
