@@ -29,9 +29,18 @@
     .body textarea{
         width: 100%;
     }
+    #categories{
+        padding: 5px 10px;
+    }
 </style>
 <body>
     <form action="http://localhost:7000/newpost" method="post">
+        <label for="category">
+            Chose a Category
+            <select name="categories" id="categories">
+                
+            </select>
+        </label>
         <label for="author" class="author">
             Author
             <textarea name="author" id="" cols="30" rows="10"></textarea>

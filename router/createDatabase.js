@@ -1,6 +1,9 @@
 const express = require('express');
 const mysql = require('mysql')
 dbRouter = express.Router();
+// const cors = require('cors');
+
+
 
 db = mysql.createConnection({
    host: 'localhost',
@@ -29,6 +32,15 @@ dbRouter.get('/createTable/:tableName', (req, res)=>{
         if(err) throw err
         res.send(`${req.params.tableName} created....`)
         console.log(result)
+    })
+})
+
+dbRouter.get('/numberOfTb', (req, res)=>{
+    sql = `show full tables`
+    db.query(sql, (err, results)=>{
+        if(err) throw err;
+        console.log(results)
+        res.send(results);
     })
 })
 
