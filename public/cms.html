@@ -5,7 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>test</title>
 </head>
+<style>
+    body{
+        padding: 20px;
+        margin: 0;
+    }
+    form{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    label{
+        display: flex;
+        flex-direction: column;
+        margin: 10px 0;
+    }
+    .body{
+        flex-basis: 100%;
+    }
+    .image{
+        flex-basis: 100%;
+    }
+    .body textarea{
+        width: 100%;
+    }
+</style>
 <body>
-    
+    <form action="http://localhost:7000/newpost" method="post">
+        <label for="author" class="author">
+            Author
+            <textarea name="author" id="" cols="30" rows="10"></textarea>
+        </label>
+        <label for="title" class="title">
+            Title
+            <textarea name="title" id="" cols="30" rows="10"></textarea>
+        </label>
+        <label for="body" class="body">
+            Post Body
+            <textarea name="body" id="" cols="30" rows="10"></textarea>
+        </label>
+        <label for="image" class="image">
+            <input type="file">
+        </label>
+        <label for="date" class="date">
+            Date
+            <input type="date">
+        </label>
+        <label for="time" class="time">
+            <input type="time">
+        </label>
+        <input style="flex-basis: 100%; padding: 10px; background: green; color: white;" type="submit" value="post">
+    </form>
+
+
+
+
+
+    <script src="./assets/js/admin.js"></script>
 </body>
 </html>
