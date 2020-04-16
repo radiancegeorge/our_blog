@@ -1,24 +1,27 @@
 const dateElem = document.querySelector('.date input');
 const timeElem = document.querySelector('.time input')
 const date = new Date();
-const form = document.querySelector('form');
+const form = document.querySelector('.main');
+const creatCategoryForm = document.querySelector('.createcategory')
 const selectCategories = form.categories;
 
-
+creatCategoryForm.addEventListener('submit',(e)=>{
+  
+})
 const fetchCategories = ()=>{
     const xml = new XMLHttpRequest();
     xml.onreadystatechange = ()=>{
-        if(xml.readyState == 4){
+        if(xml.readyState == 4 && xml.status === 200){
             // console.log(xml.response)
             response = xml.response;
             response.forEach(data => {
                 option = document.createElement('option');
                 option.value = data.Tables_in_our_blog;
                 option.innerText = data.Tables_in_our_blog; 
-                selectCategories.appendChild(option)
+                selectCategories.appendChild(option);
             });
         }else{
-            console.log('nothing')
+            
         }
     }
     xml.open('get', 'http://localhost:7000/numberOfTb');
@@ -29,9 +32,33 @@ const fetchCategories = ()=>{
 
 
 
-
 form.addEventListener('submit', (e)=>{
-    e.preventDefault()
+    e.preventDefault();
+})
+form.post.addEventListener('click', (e)=>{
+    
+    data = {
+        category: form.categories.value,
+        author: form.author.value,
+        title: form.title.value,
+        body: form.body.value,
+        date: form.date.value,
+        time: form.time.value
+    };
+    const xml = new XMLHttpRequest();
+
+    xml.onreadystatechange = ()=>{
+        if(xml.readyState === 4 && xml.status === 200){
+            console.log(xml.response)
+        }
+    }
+
+    xml.open('post', 'http://localhost:7000/newpost');
+    xml.setRequestHeader('header', 'application/json');
+    xml.responseType = 'json';
+    xml.send(data);
+    console.log(data)
+
 })
 
 

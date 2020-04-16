@@ -7,17 +7,22 @@ const dbrouter = require('./router/createDatabase');
 
 app.use(cors());
 
+app.use(express.json())
 
-// app.get('/', (req, res) => {
-//     res.send('home page')
-// })
+// new post
+app.post('/newpost', (req, res) => {
+    console.log(req.body);
+    res.end()
+})
+
 app.use(express.static(`${__dirname}/public`));
 
 app.set('views engine', 'ejs')
 
+app.use(express.urlencoded({ extended: false }))
+
 app.use('/', dbrouter)
 
-// trying to know the numbers of available table
 
 
 
