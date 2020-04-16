@@ -4,17 +4,13 @@ const mysql = require('mysql');
 const port = process.env.PORT || 7000;
 const app = express();
 const dbrouter = require('./router/createDatabase');
+const postsRouter = require('./router/posts');
 
 app.use(cors());
 
 app.use(express.json())
 
-// new post
-app.post('/newpost', (req, res) => {
-    console.log(req.body);
-    res.end()
-})
-
+app.use('/posts', postsRouter)
 app.use(express.static(`${__dirname}/public`));
 
 app.set('views engine', 'ejs')

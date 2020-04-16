@@ -1,3 +1,5 @@
+
+
 const dateElem = document.querySelector('.date input');
 const timeElem = document.querySelector('.time input')
 const date = new Date();
@@ -35,7 +37,7 @@ const fetchCategories = ()=>{
 form.addEventListener('submit', (e)=>{
     e.preventDefault();
 })
-form.post.addEventListener('click', (e)=>{
+form.post.addEventListener('click', ()=>{
     
     data = {
         category: form.categories.value,
@@ -45,16 +47,17 @@ form.post.addEventListener('click', (e)=>{
         date: form.date.value,
         time: form.time.value
     };
+    data = JSON.stringify(data)
     const xml = new XMLHttpRequest();
 
     xml.onreadystatechange = ()=>{
         if(xml.readyState === 4 && xml.status === 200){
-            console.log(xml.response)
+            window.alert('posted')
         }
     }
 
-    xml.open('post', 'http://localhost:7000/newpost');
-    xml.setRequestHeader('header', 'application/json');
+    xml.open('post', 'http://localhost:7000/posts/newpost');
+    xml.setRequestHeader('content-type', 'application/json');
     xml.responseType = 'json';
     xml.send(data);
     console.log(data)
