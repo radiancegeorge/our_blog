@@ -46,6 +46,11 @@ body{
           left: 0;
           min-height: 100%;
           line-height: 3;
+          .cate{
+             padding: 20px;
+             text-transform: uppercase;
+             color: white;
+          }
           .close{
               font-size: 35px;
               text-align: right;
@@ -293,6 +298,101 @@ body{
                 .name  {
                     text-transform: capitalize;
                 }
+            }
+        }
+    }
+}
+@media (max-width: 669px){
+    .imageslider{
+        .slider{
+            height: 250px;
+            .images{
+                height: 250px;
+            }
+        }
+    }
+    .newsletter{
+        form{
+            h1{
+                flex-basis: 100%;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            button{
+                flex-basis: 100%;
+                text-align: center;
+                margin: 20px;
+            }
+        }
+    }
+    .highlights{
+        .main-highlights{
+            .col{
+                flex-basis: 100%;
+            }
+        }
+    }
+    .footer{
+        footer{
+            .about-blog{
+                flex-basis: 50%;
+            }
+            .latest-tweets{
+                flex-basis: 50%;
+            }
+            .latest-comments{
+                flex-basis: 50%;
+            }
+            .follow-me{
+                flex-basis: 50%;
+            }
+        }
+    }
+}
+@media (max-width: 996px){
+       .imageslider{
+        .slider{
+            height: 300px;
+            .images{
+                height: 300px;
+            }
+        }
+    }
+    .newsletter{
+        form{
+            h1{
+                flex-basis: 100%;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            button{
+                flex-basis: 30%;
+            }
+            input{
+                flex-basis: 30%;
+            }
+        }
+    }
+    .highlights{
+        .main-highlights{
+            .col{
+                flex-basis: 48%;
+            }
+        }
+    }
+    .footer{
+        footer{
+            .about-blog{
+                flex-basis: 50%;
+            }
+            .latest-tweets{
+                flex-basis: 50%;
+            }
+            .latest-comments{
+                flex-basis: 50%;
+            }
+            .follow-me{
+                flex-basis: 50%;
             }
         }
     }

@@ -10,6 +10,10 @@ const selectCategories = form.categories;
 creatCategoryForm.addEventListener('submit',(e)=>{
   
 })
+
+
+// this section for getting list of categories
+
 const fetchCategories = ()=>{
     const xml = new XMLHttpRequest();
     xml.onreadystatechange = ()=>{
@@ -36,7 +40,10 @@ const fetchCategories = ()=>{
 
 form.addEventListener('submit', (e)=>{
     e.preventDefault();
-})
+});
+
+// this section for posting data
+
 form.post.addEventListener('click', ()=>{
     
     data = {

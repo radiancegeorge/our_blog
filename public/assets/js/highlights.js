@@ -15,7 +15,7 @@ cols.forEach(col => {
 
     colChildren.forEach(child =>{
         child.addEventListener('mouseenter',(e)=>{
-                console.log('over');
+                // console.log('over');
                 gsap.to(e.target,{
                     y: -5,
                     rotateZ: 2,
@@ -26,7 +26,7 @@ cols.forEach(col => {
     
     colChildren.forEach( child =>{
         child.addEventListener('mouseleave',(e)=>{
-        console.log('over');
+        // console.log('over');
         gsap.to(e.target,{
             y: 5,
             rotateZ: 0,

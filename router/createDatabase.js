@@ -37,6 +37,7 @@ dbRouter.get('/createTable/:tableName', (req, res)=>{
 dbRouter.post('/createTable/', (req, res)=>{
     body = req.body;
     console.log(body.name, 'created...')
+    console.log(body.name)
     sql = `CREATE TABLE ${body.name} (id int auto_increment, author varchar(255), title varchar(255), body varchar(65536), date varchar(255), time varchar(255), images varchar(255), key(id))` 
     db.query(sql, (err, result)=>{
         if(err) throw err

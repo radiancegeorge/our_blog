@@ -19,7 +19,9 @@ app.use(express.urlencoded({ extended: false }))
 
 app.use('/', dbrouter)
 
-
+app.get('/admin', (req, res)=>{
+    res.sendfile('./public/cms.html')
+});
 
 
 
