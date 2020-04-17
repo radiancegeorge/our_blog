@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://kit.fontawesome.com/aa7e4c99e0.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our blog</title>
+</head>
+<body>
+    <section class="header">
+        <header>
+            <div class="container">
+                <nav>
+                    <div class="menu">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                    <div class="logo">
+                        <h1>OUR BLOG</h1>
+                    </div>
+                    <div class="nav-items">
+                        <div class="close">
+                            <span>+</span>
+                        </div>
+                        <div class="cate">
+                            <h1>categories</h1>
+                        </div>
+                        <ul>
+                          <!-- this is where generated links show up...pls leave empty -->
+                        </ul>
+                    </div>
+                    <div class="share">
+                        <a href=""><img src="./assets/img/ball.png" alt=""></a>
+                        <a href=""><img src="./assets/img/fb.png" alt=""></a>
+                        <a href=""><img src="./assets/img/twitter.png" alt=""></a>
+                        <a href=""><img src="./assets/img/pintrest.png" alt=""></a>
+                    </div>
+                </nav>
+            </div>
+        </header>
+    </section>
+        <section class="imageslider">
+            <div class="container">
+                <div class="slider">
+                    <div class="wrap">
+                        <div class="images">
+                            <img src="./assets/img/Placeholder.png" alt="">
+                        </div>
+                        <div class="images">
+                            <img src="./assets/img/Placeholder.png" alt="">
+                        </div>
+                        <div class="images">
+                            <img src="./assets/img/Placeholder.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section class="newsletter">
+        <div class="container">
+            <form action="">
+                <h1>SIGNUP TO NEWSLETTER</h1>
+                <input type="text" placeholder="YOUR NAME" name="name">
+                <input type="email" placeholder="YOUR EMAIL ADDRESS" name="e-mail">
+                <button type="submit">SUBSCRIBE NOW</button>
+            </form>
+        </div>
+    </section>
+    <section class="highlights">
+        <div class="container">
+            <div class="main-highlights">
+
+
+                <!-- testing the mic lol -->
+
+                <% mainData.forEach( item =>{%>
+                        <div class="col"> 
+                            <% item.data.forEach(data =>{%>
+                                <div class="card">
+                                    <div class="cat-img">
+                                        <img src="./assets/img/forma 1.png" alt="">
+                                    </div>
+                                    <h3 class="cat">
+                                        <%= item.category %> 
+                                    </h3>
+                                    <h2 class="title">
+                                        <%= data.title %> 
+                                    </h2>
+                                    <h3 class="date">
+                                        <%= data.date %> 
+                                    </h3>
+                                    
+                                    <%
+                                        let count = data.body.length / 3;
+                                        let newBody = data.body.slice(0,count)%>
+                                        <p class="preview">
+                                            <%= newBody %>
+                                        </p>
+                                            
+                                   <% %>
+                            
+                                    <a href="/article/<%= item.category %>/<%= data.id %>" class="more">
+                                        read more
+                                    </a>
+                                    <div class="cmt">
+                                        <div class="comment">
+                                            <span><img src="./assets/img/Icon.png" alt=""></span>
+                                            no comment
+                                        </div>
+                                        <div class="share">
+                                            <a href=""><img src="./assets/img/ball.png" alt=""></a>
+                                            <a href=""><img src="./assets/img/fb.png" alt=""></a>
+                                            <a href=""><img src="./assets/img/twitter.png" alt=""></a>
+                                            <a href=""><img src="./assets/img/pintrest.png" alt=""></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            <% }) %>
+                        </div>  
+               <% }) %> 
+            </div>
+        </div>
+    </section>
+    <section class="footer">
+        <div class="container">
+            <footer>
+                <div class="about-blog">
+                    <h1>about blog</h1>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis non voluptatum ullam, dolorem doloribus error voluptatem minus deserunt veritatis sequi?
+                    </p>
+                </div>
+                <div class="latest-tweets">
+                    <h1>latest tweets</h1>
+                    <div class="tweet">
+                        <span class="image">
+                            <img src="./assets/img/twitter.png" alt="">
+                        </span>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum eligendi voluptatum distinctio eveniet doloribus maiores assumenda necessitatibus aliquam consequuntur tenetur.</p>
+                    </div>
+                    <div class="tweet">
+                        <span class="image">
+                            <img src="./assets/img/twitter.png" alt="">
+                        </span>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum eligendi voluptatum distinctio eveniet doloribus maiores assumenda necessitatibus aliquam consequuntur tenetur.</p>
+                    </div>
+                </div>
+                <div class="follow-me">
+                    <h1>follow me on instagram</h1>
+                </div>
+                <div class="latest-comments">
+                    <h1>latest comment</h1>
+                    <div class="comment-box">
+                        <p class="name">rhema</p>
+                        <p class="comment">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ipsa nemo ad atque hic voluptatibus in eligendi ducimus id dignissimos.
+                        </p>
+                    </div>
+                    <div class="comment-box">
+                        <p class="name">precious</p>
+                        <p class="comment">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ipsa nemo ad atque hic voluptatibus in eligendi ducimus id dignissimos.
+                        </p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </section>
+    <p class="copyright" style="text-align: center; background: #000;
+    color: white;
+    padding: 5px; font-size: 12px;">copyright</p>
+    <script src="./assets/js/gsap.min.js"></script>
+    <script src="./assets/js/nav.js"></script>
+    <script src="./assets/js/highlights.js"></script>
+    <script src="./assets/js/slider.js"></script>
+    <script src="./assets/js/fetchIndexData.js"></script>
+</body>
+</html>

@@ -19,7 +19,7 @@ const fetchData = ()=>{
             })
         }
     }
-    xml.open('get', 'http://localhost:7000/numberOfTb');
+    xml.open('get', '/numberOfTb');
     xml.responseType = 'json';
     xml.setRequestHeader ('content-type', 'application/json');
     xml.send();
