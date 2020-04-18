@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+body{
+    background-color: #f9f9fb;
+}
+.detailsbothsides{
+    display: flex;
+    margin-left: 50px;
+    margin-right: 50px;
+    
+}
+.detailsleft{
+    flex-basis: 70%;
+}
+.box1left{
+    height: 300px;
+    background: darkgrey;
+}
+.box2left{
+    background-color: white;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.box2left img{
+    height: 40px;
+    width: 40px;
+    position:relative;
+    top: -20px;
+    left: 47%;
+}
+.box2left h6{
+    text-align: center;
+    color: grey;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.box2left h4{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.profileanddate{
+    text-align: center;
+}
+.profileanddate span{
+    color: grey;
+    font-size: 10.72px;
+
+}
+.profileanddate span i{
+    color: black;
+}
+.space{
+    margin-left: 10px;
+}
+.textp{
+    margin-top: 20px;
+    font-size: 14px;
+    justify-content: stretch;
+    line-height: 1.5;
+    letter-spacing: 0.8px;
+    text-align: justify;
+}
+.textpp{
+    color: grey;
+    font-size: 12px;
+    text-align: center;
+    word-spacing: 5px;
+}
+.left15{
+    margin-left: 15px;
+}
+.clrs{
+    font-size: 12px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.clrs span{
+    color: grey;
+}
+.box3left{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.box3left button{
+    padding: 30px 150px;
+    color: white;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 11px;
+    border: none;  
+}
+.box3left .one{
+    background-color: black;
+}
+.box3left .two{
+    background-color: grey;
+}
+.right15{
+    margin-right: 15px;
+}
+.box4left{
+    display: flex;
+    margin-bottom: 10px;
+}
+.box4leftleft{
+    flex-basis: 20%;
+    background-color: black;
+}
+.box4leftright{
+    flex-basis: 80%;
+    padding: 20px 10px;
+    background-color: #fff;
+    
+}
+.box4leftright div{
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    font-weight: bolder;
+}
+.box4leftright hr{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: lightgrey;
+    height: 1px;
+    border: none;
+}
+.box4leftright p{
+    font-size: small;
+}
+.box5left{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.box5fbbox{
+    background: white;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    font-weight: bolder;
+    color: grey;
+    justify-content: center;
+    align-items: center;
+}
+.box5leftbox{
+    background: white;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    font-weight: bolder;
+    color: grey;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 40px;
+}
+.box5fbbox .fb{
+    padding: 10px 20px;
+}
+.fa-facebook-f{
+    background: black;
+    color: white!important;
+    font-size: 10px;
+    padding: 10px 15px;
+}
+.box5leftbox .fab{
+    color: black;
+    font-size: 10px;
+    padding-right: 15px;
+}
+.box6left{
+    padding: 20px 10px;
+    background: white;
+}
+.box6left div{
+    display: flex;
+    justify-content: space-between;
+}
+.box6left span{
+    font-weight: bolder;
+    letter-spacing: 1.5px;
+}
+.box6left span button{
+    background: black;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+}
+.box6left div div{
+    flex-basis: 32%;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.box6left div div div{
+    height: 220px;
+    min-width: 100%;
+    background: black;
+}
+.mt20{
+    margin-top: 20px;
+}
+.box6left div div p{
+    font-weight: bolder;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    padding: 10px 1px;
+}
