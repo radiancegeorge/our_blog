@@ -34,25 +34,64 @@ app.use('/', dbrouter)
 app.get('/', (req, res)=>{
     sql = `show full tables`;
     database.query(sql, (err , results)=>{
-        const mainData = []
+        const mainData = [];
         if(err) throw err;
-        results.forEach(category =>{
-            // console.log(category);
-            // const mainData = [];
-            sql = `select * from ${category.Tables_in_our_blog}`;
-            database.query(sql, (err, results)=>{
-                if (err) throw err;
-                const data = results.filter( result =>{
-                    if(results.indexOf(result) < 3) return result
-                });
-                mainData.push({data, category: category.Tables_in_our_blog});
-                console.log(category.Tables_in_our_blog)
-                if(mainData.length === 4){
-                    console.log(mainData)
-                    res.render('index', {mainData})
-                }
-            })
+        // console.log(results)
+        const lessThanFourCategories = results.filter(categories =>{
+            if(results.indexOf(categories) < 4){
+                return categories
+            }
         });
+        // console.log(`:: cate ${lessThanFourCategories}`);
+
+        
+        lessThanFourCategories.forEach(element => {
+            sql = `SELECT * FROM ${element.Tables_in_our_blog} ORDER BY id DESC`;
+            database.query(sql, (err, result)=>{
+                if(err) throw err;
+                // console.log(result.length);
+                const lessThanThreeUpdates = result.filter( updates =>{
+                    if(result.indexOf(updates) < 3){
+                        return updates;
+                    }
+                });
+                const data = {
+                    lessThanThreeUpdates,
+                    category: element.Tables_in_our_blog
+                }
+                mainData.push(data)
+            })
+
+            
+        })
+        
+        setTimeout(() => {
+            mainData.forEach( data=>{
+                data.lessThanThreeUpdates.forEach(item =>{
+                    console.log(item)
+                })
+            })
+            res.render('index', {mainData})
+        }, 2000);
+        
+
+        // results.forEach(category =>{
+        //     // console.log(category);
+        //     // const mainData = [];
+        //     sql = `select * from ${category.Tables_in_our_blog}`;
+        //     database.query(sql, (err, results)=>{
+        //         if (err) throw err;
+        //         const data = results.filter( result =>{
+        //             if(results.indexOf(result) < 3) return result
+        //         });
+        //         mainData.push({data, category: category.Tables_in_our_blog});
+        //         console.log(category.Tables_in_our_blog)
+        //         if(mainData.length === 4){
+        //             console.log(mainData)
+        //             res.render('index', {mainData})
+        //         }
+        //     })
+        // });
         
     });
     
