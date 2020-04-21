@@ -12,15 +12,16 @@ body{
 }
 .detailsbothsides{
     display: flex;
+    max-width: 100%!important;
     margin-left: 50px;
     margin-right: 50px;
-    
+    justify-content: space-between;
 }
 .detailsleft{
-    flex-basis: 70%;
+    flex-basis: 75%;
 }
 .box1left{
-    height: 300px;
+    height: 400px;
     background: darkgrey;
 }
 .box2left{
@@ -167,7 +168,7 @@ body{
 .box5fbbox .fb{
     padding: 10px 20px;
 }
-.fa-facebook-f{
+.box5fbbox .fa-facebook-f{
     background: black;
     color: white!important;
     font-size: 10px;
@@ -214,4 +215,114 @@ body{
     font-size: 12px;
     letter-spacing: 1.5px;
     padding: 10px 1px;
+}
+.detailsright{
+    background: white;
+    padding: 25px;
+    flex-basis: 23%;
+}
+.detailsright div{
+    /* min-width: 100%; */
+    padding-bottom: 20px;
+}
+.detailsright div button{
+    padding: 9px 14px;
+    background: black;
+    color: white;
+    border: none;
+}
+.detailsright div input{
+    padding: 10px 10px;
+    color: grey;
+    font-weight: bolder;
+    background: #f9f9fb;
+    border: none;
+}
+.longimg{
+    min-height: 450px;
+    max-width: 100%;
+    background: black;
+    min-width: 100%;
+}
+.detailsright div p{
+    font-weight: bolder;
+    letter-spacing: 1.1px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.detailsright div div a{
+    display: flex;
+    justify-content: space-between;
+    color: grey;
+    font-weight: bolder;
+    font-size: 13px;
+    letter-spacing: 1.1px;
+}
+.shortimg{
+    min-height: 200px;
+    max-width: 100%;
+    background: black;
+    min-width: 100%;
+}
+.specialdiv{
+    max-width: 100%!important;
+}
+.specialdiv p{
+    text-align: center;
+}
+.specialdiv div{
+    display: flex!important;
+    flex-flow: row wrap;
+    /* max-width: 100%!important; */
+    justify-content: space-between;
+}
+.smalldivbox{
+    flex-basis: 30%;
+    padding-bottom: 0px!important;
+}
+.smalldivbox img{
+    background: black;
+    min-width: 100%;
+}
+.widetextbox{
+    flex-basis: 67%;
+    padding-bottom: 0px!important;
+}
+.widetextbox p{
+    font-size: 12px;
+    text-align: left!important;
+    font-weight: bolder;
+    padding-bottom: 8px!important;
+}
+.widetextbox .tinyspan{
+    padding: 0px!important;
+    color: grey;
+}
+.tinyspan{
+    font-size: 10px!important;
+    text-align: left!important;
+}
+.tinyspan span{
+    margin-left: 10px;
+}
+.icons{
+    display: flex;
+    justify-content: space-between!important;
+}
+.imgcarousel{
+    position: relative;
+}
+.caouselimg{
+    min-width: 100%;
+    min-height: 190px;
+    background: grey;
+}
+.prev{
+    position: absolute;
+    top: 45%;
+    left: -10px;
+}
+.next{
+    position: absolute;
+    top: 45%;
 }
