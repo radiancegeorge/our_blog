@@ -73,26 +73,6 @@ app.get('/', (req, res)=>{
             })
             res.render('index', {mainData})
         }, 2000);
-        
-
-        // results.forEach(category =>{
-        //     // console.log(category);
-        //     // const mainData = [];
-        //     sql = `select * from ${category.Tables_in_our_blog}`;
-        //     database.query(sql, (err, results)=>{
-        //         if (err) throw err;
-        //         const data = results.filter( result =>{
-        //             if(results.indexOf(result) < 3) return result
-        //         });
-        //         mainData.push({data, category: category.Tables_in_our_blog});
-        //         console.log(category.Tables_in_our_blog)
-        //         if(mainData.length === 4){
-        //             console.log(mainData)
-        //             res.render('index', {mainData})
-        //         }
-        //     })
-        // });
-        
     });
     
     
