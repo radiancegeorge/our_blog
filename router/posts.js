@@ -1,5 +1,5 @@
 const express = require('express');
-const mysql = require('mysql')
+const mysql = require('mysql');
 dbRouter = express.Router();
 
 
@@ -14,7 +14,7 @@ db = mysql.createConnection({
 
 db.connect((err) => {
     if (err) throw err
-    console.log('connected to db')
+    console.log('posts db online')
 })
 
 
@@ -31,10 +31,10 @@ dbRouter.post('/newpost', (req, res) => {
     sql = `insert into ${data.category} set ?`;
     db.query(sql, mainData, (err, result)=>{
         if(err) throw err;
-        console.log(result);
+        // console.log(result);
         res.sendStatus(200)
     })
-    console.log(mainData)
+    // console.log(mainData)
 })
 
 module.exports = dbRouter

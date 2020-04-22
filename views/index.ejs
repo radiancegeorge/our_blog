@@ -90,16 +90,9 @@
                                     <h3 class="date">
                                         <%= data.date %> 
                                     </h3>
-                                    
-                                    <%
-                                        let count = data.body.length / 3;
-                                        let newBody = data.body.slice(0,count)%>
                                         <p class="preview">
-                                            <%= newBody %>
+                                            <%= newBody = data.body.slice(0, 300) %>
                                         </p>
-                                            
-                                   <% %>
-                            
                                     <a href="/article/<%= item.category %>/<%= data.id %>" class="more">
                                         read more
                                     </a>
