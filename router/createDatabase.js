@@ -22,7 +22,7 @@ dbRouter.get('/createdb',(req, res)=>{
     db.query(sql, (err, result)=>{
         if(err) throw err
         res.send('database created....')
-        console.log(result)
+        // console.log(result)
     })
     
 })
@@ -30,8 +30,8 @@ dbRouter.get('/createTable/:tableName', (req, res)=>{
     sql = `CREATE TABLE ${req.params.tableName} (id int auto_increment, author varchar(255), title varchar(255), body varchar(65536), date varchar(255), time varchar(255), images varchar(255), key(id))` 
     db.query(sql, (err, result)=>{
         if(err) throw err
-        res.send(`${req.params.tableName} created....`)
-        console.log(result)
+        res.redirect('/admin')
+        // console.log(result)
     })
 });
 dbRouter.post('/createTable/', (req, res)=>{

@@ -6,19 +6,20 @@ const app = express();
 const dbrouter = require('./router/createDatabase');
 const postsRouter = require('./router/posts');
 const detailsRouter = require('./router/detailsPage');
-const highlightRouter = require('./router/highlights')
+const highlightRouter = require('./router/highlights');
+
 
 
 app.use(cors());
 
-app.use(express.json())
+// app.use(express.json())
 
-app.use('/posts', postsRouter)
 
 app.set('view engine', 'ejs')
 
-app.use(express.urlencoded({ extended: false }));
+// app.use(express.urlencoded({ extended: false }));
 
+app.use('/posts', postsRouter);
 
 app.use('/', dbrouter)
 

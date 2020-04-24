@@ -3,7 +3,7 @@
 const dateElem = document.querySelector('.date input');
 const timeElem = document.querySelector('.time input')
 const date = new Date();
-const form = document.querySelector('.main');
+const form = document.querySelector('.forPosts');
 const creatCategoryForm = document.querySelector('.createcategory')
 const selectCategories = form.categories;
 
@@ -37,38 +37,27 @@ const fetchCategories = ()=>{
 }
 
 
-
 form.addEventListener('submit', (e)=>{
-    e.preventDefault();
-});
-
-// this section for posting data
-
-form.post.addEventListener('click', ()=>{
-    
-    data = {
-        category: form.categories.value,
-        author: form.author.value,
-        title: form.title.value,
-        body: form.body.value,
-        date: form.date.value,
-        time: form.time.value
-    };
-    data = JSON.stringify(data)
-    const xml = new XMLHttpRequest();
-
-    xml.onreadystatechange = ()=>{
-        if(xml.readyState === 4 && xml.status === 200){
-            window.alert('posted')
+    e.preventDefault()
+    const category = e.target.categories;
+    const author = e.target.author;
+    const title = e.target.title;
+    const body = e.target.body;
+    const file = e.target.file;
+    const data = [category, author, title, body, file];
+    let unfilledSection = 0 ;
+    data.forEach(item => {
+        if(item.value === ''){
+            item.style.border = '2px solid red';
+            setTimeout(() => {
+                item.style.border = '';
+            }, 2500);
+        }else{
+            unfilledSection++;
+            console.log(unfilledSection);
+            if(unfilledSection === data.length) e.target.submit()
         }
-    }
-
-    xml.open('post', 'http://localhost:7000/posts/newpost');
-    xml.setRequestHeader('content-type', 'application/json');
-    xml.responseType = 'json';
-    xml.send(data);
-    console.log(data)
-
+    })
 })
 
 

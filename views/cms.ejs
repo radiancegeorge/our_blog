@@ -34,7 +34,7 @@
     }
 </style>
 <body>
-    <form action="" class="main">
+    <form action="posts/newpost" style="transition: 0.5s all;" class="forPosts" method="POST" enctype="multipart/form-data">
         <label for="category">
             Chose a Category
             <select name="categories" id="categories">
@@ -53,9 +53,9 @@
             Post Body
             <textarea name="body" id="" cols="30" rows="10"></textarea>
         </label>
-        <!-- <label for="image" class="image">
-            <input type="file">
-        </label> -->
+        <label for="image" class="image">
+            <input type="file" name="file">
+        </label>
         <label for="date" class="date">
             Date
             <input type="date" name="date">
@@ -67,8 +67,7 @@
         <input style="flex-basis: 100%; padding: 10px; background: green; color: white;" type="submit" value="post" name = 'post'>
     </form>
 
-
-        <form action="http://localhost:7000/createTable" class="createcategory" style="margin: 40px 0;" method="post">
+        <form action="/createTable" class="createcategory" style="margin: 40px 0;" method="post" >
             <h1 style="flex-basis: 100%; text-align: center;">new category?</h1>
             <label for="name">
                 <input type="text" placeholder="name of new category" style="padding: 5px 10px;" name="name">
@@ -78,6 +77,6 @@
         </form>
 
 
-    <script src="./assets/js/admin.js"></script>
+    <script src="/assets/js/admin.js"></script>
 </body>
 </html>
