@@ -15,7 +15,7 @@ const fetchData = ()=>{
                 a.innerText = item.Tables_in_our_blog;
                 li.appendChild(a);
                 categorySection.appendChild(li)
-                console.log(li)
+                // console.log(li)
             })
         }
     }

@@ -16,8 +16,15 @@ detailsDb.connect((err)=>{
 });
 // detailsRouter.use( express.static('../public'))
 detailsRouter.get('/:category/:id', (req, res) => {
-    
-    res.render('details', {data: 'hello'});
+    const category = req.params.category;
+    const id = req.params.id;
+    sql = `select * from ${category} where id = ${id}`;
+    detailsDb.query(sql, (err, result)=>{
+        if(!err){
+            data = result[0];
+            res.render('details', {data, category})
+        }else{throw err}
+    })
 });
 
 
